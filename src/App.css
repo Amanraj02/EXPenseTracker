@@ -1,0 +1,197 @@
+*{
+
+    box-sizing: border-box;
+}
+/* :root {
+    --background-color: white;
+    --text-color: black;
+  }
+  
+  .dark-mode {
+    --background-color: #121212;
+    --text-color: white;
+  }
+  
+  .app {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  } */
+  
+body{
+    margin-top: -10px;
+    background-color: #17181F;
+    color: #ddd;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 360px;
+    margin: 30px auto;
+  }
+
+/* main{
+    max-width: 540px;
+    margin: 30px auto;
+}
+/* .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
+/* .charts {
+    max-width: 600px;
+    width: 100%;
+    margin: 20px 0;
+  } */ */
+h1{
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    font-size: 2.5rem;
+}
+h1 span{
+    font-size: 1rem;
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 6px;
+}
+/* form{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+} */
+form {
+    background-color: #1F1F2E;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  form .basic {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+/* form input, form select{
+    width: 100%;
+    background-color: transparent;
+    color: #ddd;
+    border: 2px solid #30313d;
+    padding: 2px 5px;
+    border-radius: 5px;
+} */
+
+form input, form select, form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #30313d;
+    background-color: #292A3A;
+    color: #ddd;
+    outline: none;
+    transition: all 0.2s ease;
+}
+form input:focus, form select:focus {
+    border-color: #4C5FD5;
+    box-shadow: 0 0 5px rgba(76, 95, 213, 0.5);
+}
+  
+form select {
+    cursor: pointer;
+}
+form input[type='datetime-local']{
+    color: #777;
+}
+
+form div.basic{
+    display: flex;
+    gap: 5px;
+    /* margin-bottom: 5px;
+    padding: auto; */
+}
+
+/* form button{
+    width: 100%;
+    margin-top: 5px;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #ddd;
+} */
+
+form button {
+    background-color: #4C5FD5;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease;
+  }
+  
+  form button:hover {
+    background-color: #3B4BBD;
+  }
+  
+  form input::placeholder, form select option {
+    color: #aaa;
+  }
+  
+  div.description input {
+    width: 100%;
+  }
+
+div.transactions{
+    margin-top: 20px;
+}
+div.transaction{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-top: 1px solid #30313d;
+}
+div.transaction:first-child{
+    border-top: 0;
+}
+div.transaction div.description{
+    font-size:  .7rem;
+    color: #888;
+}
+div.right{
+    text-align: right;
+    color: #ddd
+}
+
+div.transaction div.datetime{
+    font-size:  .7rem;
+    color: #888;
+}
+
+.charts canvas{
+
+    gap: 20px;;
+}
+
+/* Responsive styling for larger screens */
+@media (min-width: 768px) {
+    .container {
+      max-width: 1000px;
+      flex-direction: row; /* Side-by-side layout */
+      align-items: flex-start;
+      
+    }
+  
+    .charts {
+      width: 50%;
+      padding-right: 50px;
+      box-sizing: border-box;
+      
+    }
+    
+    main {
+      width: 50%;
+    }
+  }
